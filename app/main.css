@@ -15,8 +15,8 @@ div {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  align-items: stretch;
   -webkit-align-items: stretch;
+  align-items: stretch;
 
   position: relative;
   -webkit-box-sizing: border-box;
@@ -48,6 +48,7 @@ a {
 .masterpiece {
   color: #fff;
   height: 100%;
+  -webkit-justify-content: center;
   justify-content: center;
   margin: 0 auto;
   max-width: 960px;
@@ -63,6 +64,8 @@ a {
 
 .secondary {
   font-size: 40px;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 @media (min-width: 560px) {
@@ -72,17 +75,22 @@ a {
 
   .secondary {
     font-size: 50px;
+    -webkit-flex-direction: row;
     flex-direction: row;
   }
 }
 
 .stat {
+  -webkit-align-items: center;
   align-items: center;
 }
 
 .stat .timer {
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
