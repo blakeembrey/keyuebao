@@ -1,0 +1,46 @@
+{
+  "name": "keyuebao",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "javascript": "browserify -p [ tsify --noImplicitAny ] app/main.ts > build/bundle.js",
+    "html": "minify app/main.html > build/index.html",
+    "css": "minify app/main.css > build/bundle.css",
+    "images": "imagemin assets build",
+    "copy": "cp -r assets build",
+    "clear": "rm -rf build",
+    "build": "npm run clear && npm run copy && npm run javascript && npm run html && npm run css && npm run images",
+    "start": "serve build",
+    "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:blakeembrey/keyuebao.git\" master:gh-pages --force && rm -rf .git"
+  },
+  "standard": {
+    "ignore": [
+      "coverage/**",
+      "node_modules/**",
+      "bower_components/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/keyuebao.git"
+  },
+  "keywords": [],
+  "author": "Blake Embrey <hello@blakeembrey.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/keyuebao/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/keyuebao",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "imagemin-cli": "^1.0.0",
+    "minify": "^1.4.19",
+    "serve": "^1.4.0",
+    "tsify": "^0.11.9"
+  }
+}
