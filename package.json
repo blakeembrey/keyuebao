@@ -1,12 +1,7 @@
 {
   "name": "keyuebao",
   "version": "0.0.0",
-  "description": "",
-  "main": "lib/index.js",
-  "files": [
-    "lib/index.js",
-    "LICENSE"
-  ],
+  "description": "A present for my girlfriend, to help give a sense of perspective",
   "scripts": {
     "javascript": "browserify -p [ tsify --noImplicitAny ] app/main.ts > build/bundle.js",
     "html": "minify app/main.html > build/index.html",
@@ -18,18 +13,17 @@
     "start": "serve build",
     "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:blakeembrey/keyuebao.git\" master:gh-pages --force && rm -rf .git"
   },
-  "standard": {
-    "ignore": [
-      "coverage/**",
-      "node_modules/**",
-      "bower_components/**"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/blakeembrey/keyuebao.git"
   },
-  "keywords": [],
+  "keywords": [
+    "keyue",
+    "bao",
+    "birthday",
+    "anniversary",
+    "stats"
+  ],
   "author": "Blake Embrey <hello@blakeembrey.com>",
   "license": "MIT",
   "bugs": {

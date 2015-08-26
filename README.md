@@ -1,6 +1,6 @@
 # Keyue Bao
 
-> Elegant single page statistics for Keyue and myself.
+> A present for my girlfriend, to help give a sense of perspective.
 
 ## Development
 
