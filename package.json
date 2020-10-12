@@ -34,7 +34,7 @@
     "browserify": "^11.0.1",
     "imagemin-cli": "^1.0.0",
     "minify": "^1.4.19",
-    "serve": "^1.4.0",
+    "serve": "^11.3.2",
     "tsify": "^0.11.9"
   }
 }
